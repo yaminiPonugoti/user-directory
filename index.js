@@ -29,7 +29,14 @@ const button2 = document.querySelector('button.otherOne')
         //const ageItem = document.createElement('li')
         //ageItem.textContent = `Age: ${age}`
         //list.appendChild(ageItem)
-
+        //const colorItem = document.createElement('li')
+        //colorItem.textContent = 'Favorite Color:'
+        //const colorDiv = document.createElement('div')
+        // colorDiv.style.backgroundColor = favoriteColor
+        //colorDiv.style.width = '6rem'
+        //colorDiv.style.height = '3rem'
+        // colorItem.appendChild(colorDiv)
+        //list.appendChild(colorItem)
         //users.appendChild(list)
         //ev.target.reset()
         //ev.target.userName.focus()
