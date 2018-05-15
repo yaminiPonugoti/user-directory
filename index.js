@@ -3,6 +3,7 @@ const button2 = document.querySelector('button.otherOne')
 //combining element n class selector
 //only one element on a page with a given ID
 //const form = document.querySelector('#userForm')
+
 // const handleSubmit = function(ev){
         // ev.preventDefault
         // const users = document.querySelector('#users')
@@ -12,6 +13,10 @@ const button2 = document.querySelector('button.otherOne')
         // const age = ev.target.age.value
         // users.innerHTML += '<p> ' + userName + ' , ' + age+ '</p>'
         // OR suers.innerHTML += `<p>${userName}, ${age}</p>`
+        // INSTEAD OF INNER HTML:
+        // const p = document.createElement('p')
+        // p.textContent=`${userName}, ${age}`
+        // users.appendChild(p)
         // ev.target.userName.value = '' or ev.target.reset() to reset both name and age
         // ev.target.userName.focus() 
 // }
