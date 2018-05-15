@@ -16,12 +16,24 @@ const button2 = document.querySelector('button.otherOne')
         // OR suers.innerHTML += `<p>${userName}, ${age}</p>`
 
         // INSTEAD OF INNER HTML:
-        // const p = document.createElement('p')
+        // const p = document.createElement('p') or 
         // p.textContent=`${userName}, ${age}`
         // p.style.backgroundColor = favoriteColor
         // users.appendChild(p)
         // ev.target.userName.value = '' or ev.target.reset() to reset both name and age
-        // ev.target.userName.focus() 
+        // ev.target.userName.focus()  
+        // const list = document.createElement('ul') (list instead of p everywhere)
+        // const nameItem = document.createElement('li')
+        //nameItem.textContent = `Name: ${userName}`
+        //list.appendChild(nameItem)
+        //const ageItem = document.createElement('li')
+        //ageItem.textContent = `Age: ${age}`
+        //list.appendChild(ageItem)
+
+        //users.appendChild(list)
+        //ev.target.reset()
+        //ev.target.userName.focus()
+
 // }
 // form.addEventListener('submit',handleSubmit)
 function changeHeadingText(ev){
