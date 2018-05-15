@@ -2,6 +2,14 @@ const button = document.querySelector('button.greeting')
 const button2 = document.querySelector('button.otherOne')
 //combining element n class selector
 //only one element on a page with a given ID
+//const form = document.querySelector('#userForm')
+// const handleSubmit = function(ev){
+        // ev.preventDefault
+        // const heading = document.querySelector('h1.greeting')
+        // const userName = ev.target.userName.value
+        // heading.textContent=userName
+// }
+// form.addEventListener('submit',handleSubmit)
 function changeHeadingText(ev){
     //ev.target.textContent = 'Clickity clicky'//<-to change button text
    const headingText =document.querySelector('h1.greeting')
@@ -13,10 +21,10 @@ function changeOtherHeadingText(ev){
    otherheadingText.textContent='I love Javascript!'
 }
 function myFunction() {
-    var x, text;
+    var x
 
     // Get the value of the input field with id="numb"
-    x = document.getElementById("numb").value;
+    x = document.getElementById("numb").value
 
     // If x is Not a Number or less than one or greater than 10
     const headingText = document.querySelector('h1.greeting')
