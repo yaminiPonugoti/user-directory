@@ -5,9 +5,12 @@ const button2 = document.querySelector('button.otherOne')
 //const form = document.querySelector('#userForm')
 // const handleSubmit = function(ev){
         // ev.preventDefault
+        // const users = document.querySelector('#users')
         // const heading = document.querySelector('h1.greeting')
         // const userName = ev.target.userName.value
         // heading.textContent=userName
+        // users.textContent += ' ' + userName
+        // ev.target.userName.value = '' 
 // }
 // form.addEventListener('submit',handleSubmit)
 function changeHeadingText(ev){
