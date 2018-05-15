@@ -12,5 +12,16 @@ function changeOtherHeadingText(ev){
    const otherheadingText =document.querySelector('h2.otherOne')
    otherheadingText.textContent='I love Javascript!'
 }
+function myFunction() {
+    var x, text;
+
+    // Get the value of the input field with id="numb"
+    x = document.getElementById("numb").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    const headingText = document.querySelector('h1.greeting')
+    headingText.textContent = x
+   // document.getElementById("demo").innerHTML = text;
+}
 button.addEventListener('click',changeHeadingText)
 button2.addEventListener('click',changeOtherHeadingText)
