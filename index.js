@@ -11,7 +11,8 @@ const button2 = document.querySelector('button.otherOne')
         // heading.textContent=userName
         // const age = ev.target.age.value
         // users.innerHTML += '<p> ' + userName + ' , ' + age+ '</p>'
-        // ev.target.userName.value = '' or f.reset() to reset both name and age 
+        // ev.target.userName.value = '' or ev.target.reset() to reset both name and age
+        // ev.target.userName.focus() 
 // }
 // form.addEventListener('submit',handleSubmit)
 function changeHeadingText(ev){
