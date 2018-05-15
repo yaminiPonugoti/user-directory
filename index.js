@@ -9,8 +9,9 @@ const button2 = document.querySelector('button.otherOne')
         // const heading = document.querySelector('h1.greeting')
         // const userName = ev.target.userName.value
         // heading.textContent=userName
-        // users.innerHTML += '<p> ' + userName + '</p>'
-        // ev.target.userName.value = '' 
+        // const age = ev.target.age.value
+        // users.innerHTML += '<p> ' + userName + ' , ' + age+ '</p>'
+        // ev.target.userName.value = '' or f.reset() to reset both name and age 
 // }
 // form.addEventListener('submit',handleSubmit)
 function changeHeadingText(ev){
