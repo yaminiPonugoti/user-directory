@@ -11,11 +11,14 @@ const button2 = document.querySelector('button.otherOne')
         // const userName = ev.target.userName.value
         // heading.textContent=userName
         // const age = ev.target.age.value
+        // const favoriteColor = ev.target.favoriteColor.value
         // users.innerHTML += '<p> ' + userName + ' , ' + age+ '</p>'
         // OR suers.innerHTML += `<p>${userName}, ${age}</p>`
+
         // INSTEAD OF INNER HTML:
         // const p = document.createElement('p')
         // p.textContent=`${userName}, ${age}`
+        // p.style.backgroundColor = favoriteColor
         // users.appendChild(p)
         // ev.target.userName.value = '' or ev.target.reset() to reset both name and age
         // ev.target.userName.focus() 
