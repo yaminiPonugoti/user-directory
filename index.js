@@ -9,7 +9,7 @@ const button2 = document.querySelector('button.otherOne')
         // const heading = document.querySelector('h1.greeting')
         // const userName = ev.target.userName.value
         // heading.textContent=userName
-        // users.textContent += ' ' + userName
+        // users.innerHTML += '<p> ' + userName + '</p>'
         // ev.target.userName.value = '' 
 // }
 // form.addEventListener('submit',handleSubmit)
