@@ -17,3 +17,6 @@ label{
 dl li{
     list-style: none;
 }
+dl:nth-of-type(even){
+    background-color: whitesmoke
+}
