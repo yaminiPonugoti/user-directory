@@ -13,6 +13,27 @@ const handleSubmit = function(ev){
         const userName = ev.target.userName.value
         const age = ev.target.age.value
         const favoriteColor = ev.target.favoriteColor.value
+        const list = document.createElement('ul') 
+        const renderListItem = function(){
+            const nameItem = document.createElement('li')
+            nameItem.textContent = `Name: ${userName}`
+            list.appendChild(nameItem)
+            const ageItem = document.createElement('li')
+            ageItem.textContent = `Age: ${age}`
+            list.appendChild(ageItem)
+            const colorItem = document.createElement('li')
+            colorItem.textContent = 'Favorite Color:'
+            list.appendChild(colorItem)
+            const renderColor = function(){
+                const colorDiv = document.createElement('div')
+                colorDiv.style.backgroundColor = favoriteColor //do colordiv shit in renderColor
+                colorDiv.style.width = '6rem'
+                colorDiv.style.height = '3rem'
+                colorItem.appendChild(colorDiv)
+            }
+            renderColor()
+        }
+        renderListItem()
         // users.innerHTML += '<p> ' + userName + ' , ' + age+ '</p>'
         // OR suers.innerHTML += `<p>${userName}, ${age}</p>`
         // const p = document.createElement('p') 
@@ -20,25 +41,7 @@ const handleSubmit = function(ev){
         // p.style.backgroundColor = favoriteColor
         // users.appendChild(p)
         // ev.target.userName.value = '' or ev.target.reset() to reset both name and age
-        // ev.target.userName.focus() 
-        const list = document.createElement('ul') 
-        const nameItem = document.createElement('li')
-        nameItem.textContent = `Name: ${userName}`
-        list.appendChild(nameItem)
-        const ageItem = document.createElement('li')
-        ageItem.textContent = `Age: ${age}`
-        list.appendChild(ageItem)
-        const colorItem = document.createElement('li')
-        colorItem.textContent = 'Favorite Color:'
-        const renderColor = function(){
-            const colorDiv = document.createElement('div')
-            colorDiv.style.backgroundColor = favoriteColor //do colordiv shit in renderColor
-            colorDiv.style.width = '6rem'
-            colorDiv.style.height = '3rem'
-            colorItem.appendChild(colorDiv)
-        } 
-        renderColor()
-        list.appendChild(colorItem)
+        // ev.target.userName.focus()          
         users.appendChild(list)
         form.reset()
         form.userName.focus()
