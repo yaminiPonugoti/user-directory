@@ -2,67 +2,64 @@ const button = document.querySelector('button.greeting')
 const button2 = document.querySelector('button.otherOne')
 //combining element n class selector
 //only one element on a page with a given ID
-//const form = document.querySelector('#userForm')
+const form = document.querySelector('form#userForm')
+const heading = document.querySelector('h1.greeting')
+heading.textContent=name
 
-// const handleSubmit = function(ev){
-        // ev.preventDefault
-        // const users = document.querySelector('#users')
-        // const heading = document.querySelector('h1.greeting')
-        // const userName = ev.target.userName.value
-        // heading.textContent=userName
-        // const age = ev.target.age.value
-        // const favoriteColor = ev.target.favoriteColor.value
+const handleSubmit = function(ev){
+        ev.preventDefault()
+        const form = ev.target
+        const users = document.querySelector('#users')
+        const userName = ev.target.userName.value
+        const age = ev.target.age.value
+        const favoriteColor = ev.target.favoriteColor.value
         // users.innerHTML += '<p> ' + userName + ' , ' + age+ '</p>'
         // OR suers.innerHTML += `<p>${userName}, ${age}</p>`
-
-        // INSTEAD OF INNER HTML:
-        // const p = document.createElement('p') or 
+        // const p = document.createElement('p') 
         // p.textContent=`${userName}, ${age}`
         // p.style.backgroundColor = favoriteColor
         // users.appendChild(p)
         // ev.target.userName.value = '' or ev.target.reset() to reset both name and age
-        // ev.target.userName.focus()  
-        // const list = document.createElement('ul') (list instead of p everywhere)
-        // const nameItem = document.createElement('li')
-        //nameItem.textContent = `Name: ${userName}`
-        //list.appendChild(nameItem)
-        //const ageItem = document.createElement('li')
-        //ageItem.textContent = `Age: ${age}`
-        //list.appendChild(ageItem)
-        //const colorItem = document.createElement('li')
-        //colorItem.textContent = 'Favorite Color:'
-        //const colorDiv = document.createElement('div')
-        // colorDiv.style.backgroundColor = favoriteColor
-        //colorDiv.style.width = '6rem'
-        //colorDiv.style.height = '3rem'
-        // colorItem.appendChild(colorDiv)
-        //list.appendChild(colorItem)
-        //users.appendChild(list)
+        // ev.target.userName.focus() 
+        const list = document.createElement('ul') 
+        const nameItem = document.createElement('li')
+        nameItem.textContent = `Name: ${userName}`
+        list.appendChild(nameItem)
+        const ageItem = document.createElement('li')
+        ageItem.textContent = `Age: ${age}`
+        list.appendChild(ageItem)
+        const colorItem = document.createElement('li')
+        colorItem.textContent = 'Favorite Color:'
+        const renderColor = function(){
+            const colorDiv = document.createElement('div')
+            colorDiv.style.backgroundColor = favoriteColor //do colordiv shit in renderColor
+            colorDiv.style.width = '6rem'
+            colorDiv.style.height = '3rem'
+            colorItem.appendChild(colorDiv)
+        } 
+        renderColor()
+        list.appendChild(colorItem)
+        users.appendChild(list)
+        form.reset()
+        form.userName.focus()
         //ev.target.reset()
         //ev.target.userName.focus()
-
-// }
-// form.addEventListener('submit',handleSubmit)
+        //renderListItem inside renderList
+}
+form.addEventListener('submit',handleSubmit)
 function changeHeadingText(ev){
     //ev.target.textContent = 'Clickity clicky'//<-to change button text
    const headingText =document.querySelector('h1.greeting')
    headingText.textContent='Welcome to the directory!'
 }
 function changeOtherHeadingText(ev){
-    //ev.target.textContent = 'Clickity clicky'//<-to change button text
    const otherheadingText =document.querySelector('h2.otherOne')
    otherheadingText.textContent='I love Javascript!'
 }
 function myFunction() {
-    var x
-
-    // Get the value of the input field with id="numb"
-    x = document.getElementById("numb").value
-
-    // If x is Not a Number or less than one or greater than 10
+    var word = document.getElementById("numb").value
     const headingText = document.querySelector('h1.greeting')
-    headingText.textContent = x
-   // document.getElementById("demo").innerHTML = text;
+    headingText.textContent = word
 }
 button.addEventListener('click',changeHeadingText)
 button2.addEventListener('click',changeOtherHeadingText)
