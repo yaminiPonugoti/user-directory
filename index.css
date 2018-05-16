@@ -14,3 +14,6 @@ main{
 label{
     display: block;
 }
+dl li{
+    list-style: none;
+}
