@@ -5,7 +5,6 @@ const button2 = document.querySelector('button.otherOne')
 const form = document.querySelector('form#userForm')
 const heading = document.querySelector('h1.greeting')
 heading.textContent=name
-
 const handleSubmit = function(ev){
         ev.preventDefault()
         const form = ev.target
@@ -13,8 +12,12 @@ const handleSubmit = function(ev){
         const userName = ev.target.userName.value
         const age = ev.target.age.value
         const favoriteColor = ev.target.favoriteColor.value
-        const list = document.createElement('ul') 
-        const renderListItem = function(){
+        const renderList = function(){
+            const list = document.createElement('ul') 
+            renderListItem(list)
+            users.appendChild(list)
+        }
+        const renderListItem = function(list){
             const nameItem = document.createElement('li')
             nameItem.textContent = `Name: ${userName}`
             list.appendChild(nameItem)
@@ -24,16 +27,16 @@ const handleSubmit = function(ev){
             const colorItem = document.createElement('li')
             colorItem.textContent = 'Favorite Color:'
             list.appendChild(colorItem)
-            const renderColor = function(){
-                const colorDiv = document.createElement('div')
-                colorDiv.style.backgroundColor = favoriteColor //do colordiv shit in renderColor
-                colorDiv.style.width = '6rem'
-                colorDiv.style.height = '3rem'
-                colorItem.appendChild(colorDiv)
-            }
-            renderColor()
+            renderColor(colorItem)
         }
-        renderListItem()
+        const renderColor = function(colorItem){
+            const colorDiv = document.createElement('div')
+            colorDiv.style.backgroundColor = favoriteColor //do colordiv shit in renderColor
+            colorDiv.style.width = '6rem'
+            colorDiv.style.height = '3rem'
+            colorItem.appendChild(colorDiv)
+        }
+        renderList()
         // users.innerHTML += '<p> ' + userName + ' , ' + age+ '</p>'
         // OR suers.innerHTML += `<p>${userName}, ${age}</p>`
         // const p = document.createElement('p') 
@@ -42,7 +45,7 @@ const handleSubmit = function(ev){
         // users.appendChild(p)
         // ev.target.userName.value = '' or ev.target.reset() to reset both name and age
         // ev.target.userName.focus()          
-        users.appendChild(list)
+        
         form.reset()
         form.userName.focus()
         //ev.target.reset()
