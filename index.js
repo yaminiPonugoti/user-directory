@@ -14,13 +14,18 @@ function renderColor(color){
 }
 function renderListItem(label, value){
     const item = document.createElement('li')
+    const term = document.createElement('dt')
+    term.textContent = label
+    const description = document.createElement('dd')
     item.textContent = `${label}: `
     try{
-        item.appendChild(value)
+        description.appendChild(value)
     }
     catch(e){
-        item.textContent += value
+        description.textContent += value
     }
+    item.appendChild(term)
+    item.appendChild(description)
     return item
 }
 function renderList(data){
