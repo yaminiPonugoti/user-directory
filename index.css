@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
 body{
-    font-family: sans-serif;
+    font-family: 'Slabo 27px', serif;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+}
+#userForm{
+    background-color: #eeeeee9c;
+    padding: 1rem;
+    border: 1px solid #e3e3e3;
+}
+label{
+    display: block;
 }
